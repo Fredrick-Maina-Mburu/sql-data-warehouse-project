@@ -1,104 +1,194 @@
-# Data Warehouse and Analytics Project
+# 📊 Data Warehouse and Analytics Project
 
 Welcome to the **Data Warehouse and Analytics Project** repository! 🚀  
-This project demonstrates a comprehensive data warehousing and analytics solution, from building a data warehouse to generating actionable insights. Designed as a portfolio project, it highlights industry best practices in data engineering and analytics.
+This project demonstrates an end-to-end data warehousing and analytics solution — from raw data ingestion to exploratory analysis, advanced analytics, and business reporting.
+
+Built as a **portfolio-grade project**, it showcases best practices in **data engineering, SQL analytics, and business intelligence**.
 
 ---
+
 ## 🏗️ Data Architecture
 
-The data architecture for this project follows Medallion Architecture **Bronze**, **Silver**, and **Gold** layers:
+The project follows the **Medallion Architecture** approach:
 
-1. **Bronze Layer**: Stores raw data as-is from the source systems. Data is ingested from CSV Files into SQL Server Database.
-2. **Silver Layer**: This layer includes data cleansing, standardization, and normalization processes to prepare data for analysis.
-3. **Gold Layer**: Houses business-ready data modeled into a star schema required for reporting and analytics.
+### 🔹 Bronze Layer
+- Stores raw data as received from source systems
+- Data is ingested from **ERP and CRM CSV files** into SQL Server
+
+### 🔹 Silver Layer
+- Handles data cleansing, standardization, and normalization
+- Ensures data quality and analytical consistency
+
+### 🔹 Gold Layer
+- Contains business-ready data
+- Modeled into a **Star Schema** optimized for reporting and analytics
 
 ---
+
 ## 📖 Project Overview
 
-This project involves:
+This project covers the full analytics lifecycle:
 
-1. **Data Architecture**: Designing a Modern Data Warehouse Using Medallion Architecture **Bronze**, **Silver**, and **Gold** layers.
-2. **ETL Pipelines**: Extracting, transforming, and loading data from source systems into the warehouse.
-3. **Data Modeling**: Developing fact and dimension tables optimized for analytical queries.
-4. **Analytics & Reporting**: Creating SQL-based reports and dashboards for actionable insights.
+1. **Data Architecture Design**
+   - Modern data warehouse using Bronze, Silver, and Gold layers
 
----
+2. **ETL Development**
+   - SQL-based extraction, transformation, and loading pipelines
 
-## 🛠️ Important Links & Tools:
+3. **Data Modeling**
+   - Fact and dimension tables designed for analytical workloads
 
-Everything is for Free!
-- **[Datasets](datasets/):** Access to the project dataset (csv files).
-- **[SQL Server Express](https://www.microsoft.com/en-us/sql-server/sql-server-downloads):** Lightweight server for hosting your SQL database.
-- **[SQL Server Management Studio (SSMS)](https://learn.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16):** GUI for managing and interacting with databases.
-- **[Git Repository](https://github.com/):** Set up a GitHub account and repository to manage, version, and collaborate on your code efficiently.
-- **[DrawIO](https://www.drawio.com/):** Design data architecture, models, flows, and diagrams.
-- **[Notion](https://www.notion.com/templates/sql-data-warehouse-project):** Get the Project Template from Notion
-- **[Notion Project Steps](https://thankful-pangolin-2ca.notion.site/SQL-Data-Warehouse-Project-16ed041640ef80489667cfe2f380b269?pvs=4):** Access to All Project Phases and Tasks.
+4. **Exploratory Data Analysis (EDA)**
+   - Understanding data distributions, trends, and anomalies
 
----
+5. **Advanced Analytics**
+   - Time-based analysis, segmentation, cumulative metrics, and performance evaluation
 
-## 🚀 Project Requirements
-
-### Building the Data Warehouse (Data Engineering)
-
-#### Objective
-Develop a modern data warehouse using SQL Server to consolidate sales data, enabling analytical reporting and informed decision-making.
-
-#### Specifications
-- **Data Sources**: Import data from two source systems (ERP and CRM) provided as CSV files.
-- **Data Quality**: Cleanse and resolve data quality issues prior to analysis.
-- **Integration**: Combine both sources into a single, user-friendly data model designed for analytical queries.
-- **Scope**: Focus on the latest dataset only; historization of data is not required.
-- **Documentation**: Provide clear documentation of the data model to support both business stakeholders and analytics teams.
+6. **Business Reporting**
+   - Customer and product-level analytical reports for decision-making
 
 ---
 
-### BI: Analytics & Reporting (Data Analysis)
+## 🔍 Analytics & Insights Coverage
 
-#### Objective
-Develop SQL-based analytics to deliver detailed insights into:
-- **Customer Behavior**
-- **Product Performance**
-- **Sales Trends**
+The analytics layer answers key business questions around:
 
-These insights empower stakeholders with key business metrics, enabling strategic decision-making.  
+- Customer behavior
+- Product performance
+- Sales trends over time
+- Contribution & distribution analysis
+- Performance and growth metrics
+
+---
+
+## 📊 Analysis & Reporting Structure
+
+All analytical work is organized under the **scripts** directory for clarity and reproducibility.
+
+---
+
+### 📁 Exploratory Data Analysis (EDA)
+
+**Location:** `scripts/EDA/`
+
+This folder contains SQL scripts focused on understanding and validating the dataset:
+
+- **date_exploration**  
+  Analysis of time ranges, trends, and seasonality
+
+- **exploring_the_database**  
+  High-level data discovery and database structure inspection
+
+- **magnitude_exploration**  
+  Sales volume, revenue magnitude, and scale analysis
+
+- **measures_exploration**  
+  Key business metrics such as revenue, quantity, averages, and ratios
+
+- **ranking**  
+  Ranking customers, products, and categories by performance
+
+---
+
+### 📁 Business Reports
+
+**Location:** `scripts/reports/`
+
+This folder contains SQL-based analytical reports designed for business stakeholders:
+
+- **customers_report**
+  - Customer segmentation
+  - Purchase behavior analysis
+  - Revenue contribution and ranking
+
+- **products_report**
+  - Product performance evaluation
+  - Sales contribution and comparison
+  - Product ranking and trend insights
+
+---
+
+### 📁 Advanced Analytics
+
+**Location:** `scripts/advanced-analysis/`
+
+This folder contains deeper analytical techniques commonly used in BI and data analytics roles:
+
+- **change_over_time_analysis**  
+  Trend analysis and period-over-period performance comparisons
+
+- **cumulative_analysis**  
+  Running totals and cumulative contribution analysis
+
+- **data_segmentation_analysis**  
+  Segmentation of customers and products into meaningful analytical groups
+
+- **part_to_whole_analysis**  
+  Contribution analysis (e.g., category vs total sales)
+
+- **performance_analysis**  
+  KPI evaluation, benchmarking, and performance assessment
+
+---
+
+## 🛠️ Tools & Technologies
+
+All tools used in this project are **free and open-source**:
+
+- SQL Server Express – Data warehouse hosting
+- SQL Server Management Studio (SSMS) – Database querying and development
+- Draw.io – Architecture, ETL, and data modeling diagrams
+- Git & GitHub – Version control and portfolio hosting
+- Notion – Project planning and documentation
+
+---
 
 ## 📂 Repository Structure
-```
+
 data-warehouse-project/
 │
-├── datasets/                           # Raw datasets used for the project (ERP and CRM data)
+├── datasets/ # Raw ERP and CRM datasets
 │
-├── docs/                               # Project documentation and architecture details
-│   ├── etl.drawio                      # Draw.io file shows all different techniquies and methods of ETL
-│   ├── data_architecture.drawio        # Draw.io file shows the project's architecture
-│   ├── data_catalog.md                 # Catalog of datasets, including field descriptions and metadata
-│   ├── data_flow.drawio                # Draw.io file for the data flow diagram
-│   ├── data_models.drawio              # Draw.io file for data models (star schema)
-│   ├── naming-conventions.md           # Consistent naming guidelines for tables, columns, and files
+├── docs/ # Architecture and design documentation
+│ ├── etl.drawio
+│ ├── data_architecture.drawio
+│ ├── data_flow.drawio
+│ ├── data_models.drawio
+│ ├── data_catalog.md
+│ └── naming-conventions.md
 │
-├── scripts/                            # SQL scripts for ETL and transformations
-│   ├── bronze/                         # Scripts for extracting and loading raw data
-│   ├── silver/                         # Scripts for cleaning and transforming data
-│   ├── gold/                           # Scripts for creating analytical models
+├── scripts/
+│ ├── bronze/ # Raw data ingestion
+│ ├── silver/ # Data cleaning and transformations
+│ ├── gold/ # Star schema and analytical models
+│ ├── EDA/ # Exploratory Data Analysis
+│ ├── reports/ # Business reports
+│ └── advanced-analysis/ # Advanced analytics
 │
-├── tests/                              # Test scripts and quality files
+├── tests/ # Data quality and validation scripts
 │
-├── README.md                           # Project overview and instructions
-├── LICENSE                             # License information for the repository
-├── .gitignore                          # Files and directories to be ignored by Git
-└── requirements.txt                    # Dependencies and requirements for the project
-```
+├── README.md
+├── LICENSE
+├── .gitignore
+└── requirements.txt
+
 ---
 
 ## 🛡️ License
 
-This project is licensed under the [MIT License](LICENSE). You are free to use, modify, and share this project with proper attribution.
+This project is licensed under the **MIT License**.  
+You are free to use, modify, and share this project with proper attribution.
+
+---
 
 ## 🌟 About Me
 
-Hi there! I'm **Fredrick Maina**. I’m an IT professional who likes working with data!
+Hi! I'm **Fredrick Maina**, a data-driven IT professional with a strong interest in **data analytics, SQL, and business intelligence**.
 
-Let's stay in touch!
+This project demonstrates my ability to:
+- Design and implement data warehouses
+- Write high-quality analytical SQL
+- Perform exploratory and advanced data analysis
+- Translate data into actionable business insights
 
-
+Let’s connect and talk data 🚀
